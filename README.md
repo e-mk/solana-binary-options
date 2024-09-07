@@ -1,15 +1,11 @@
 ## About
-This Solana program is designed to show some tools and techniques that are used to create Binary Options on the Solana blockchain. 
+This Solana program showcases the tools and techniques used to create Binary Options on the Solana blockchain.
 
-The program is organized into three instructions:
+The program is structured around three key instructions:
 
-- **initialize**: The instruction for the market maker to init the Binary Option
-- **do_bet**: The instruction to make the bet
-- **resolve**: This is the final step where the program distributes the prize and closes the accounts.
-
-## Main Challenges
-- Scheduling the instruction execution on the Solana chain was challenging. The main approach is to use `clockwork-sdk` which is deprecated and does not support Anchor's latest versions. Taking that into account the most officiant way will be to schedule `resolve` instruction execution off-chain.
-- Pyth Oracle is not supporting Solana devnet, resulting in mocking price on devnet for tests. Other Oracles were not considered because of the time concerns.
+- **initialize**: The instruction for the market maker to initialize the Binary Option.
+- **do_bet**: The instruction to place a bet.
+- **resolve**: The final step, where the program distributes prizes and closes the accounts.
 
 ## How to run
 1. Install solana development suit. 
@@ -22,3 +18,7 @@ The program is organized into three instructions:
     ```sh
     anchor test
     ```
+
+## Main Challenges
+- Scheduling instruction execution on the Solana chain proved to be challenging. The main approach involved using the `clockwork-sdk`, which is now deprecated and incompatible with the latest versions of Anchor. Considering this, the most efficient solution is to schedule the `resolve` instruction execution off-chain.
+- Pyth Oracle does not support Solana Devnet, leading to mocked prices for tests. Other Oracles were not explored due to time constraints.
