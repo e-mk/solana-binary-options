@@ -67,10 +67,10 @@ pub struct ResolveBinaryOptions<'info> {
   )]
   pub vault: InterfaceAccount<'info, TokenAccount>,
 
-  // mainnet
+  // devnet / mainnet
   // pub price_update: Account<'info, PriceUpdateV2>,
 
-  // devnet
+  // localnet
   pub price_update:  SystemAccount<'info>,
   
   pub token_program: Interface<'info, TokenInterface>,
@@ -97,14 +97,14 @@ impl<'info> ResolveBinaryOptions<'info> {
       &[binary_option.bump],
   ]];
 
-    // mainnet
+    // devnet / mainnet
     // let price_update = &mut self.price_update;
     // let price: pyth_solana_receiver_sdk::price_update::Price = price_update.get_price_no_older_than(
     //   &Clock::get()?,
     //   MAXIMUM_AGE_MINUTES,
     //   &get_feed_id_from_hex(PYTH_SOL_USD_FEED_ID)?,
     // )?;
-    // devnet
+    // localnet
     let price: pyth_solana_receiver_sdk::price_update::Price = Price {        
       price: 150,        
       conf: 0,              

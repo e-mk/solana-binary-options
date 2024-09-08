@@ -21,4 +21,4 @@ The program is structured around three key instructions:
 
 ## Main Challenges
 - Scheduling instruction execution on the Solana chain proved to be challenging. The main approach involved using the `clockwork-sdk`, which is now deprecated and incompatible with the latest versions of Anchor. Considering this, the most efficient solution is to schedule the `resolve` instruction execution off-chain.
-- Pyth Oracle does not support Solana Devnet, leading to mocked prices for tests. Other Oracles were not explored due to time constraints.
+- Pyth Oracle does not exist on Solana Localnet, forcing developer to mocked prices for tests. Other Oracles were not explored due to time constraints.

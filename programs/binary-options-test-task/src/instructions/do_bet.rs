@@ -42,10 +42,10 @@ pub struct DoBet<'info> {
   )]
   pub vault: InterfaceAccount<'info, TokenAccount>,
 
-  // mainnet
+  // devnet / mainnet
   // pub price_update: Account<'info, PriceUpdateV2>,
 
-  // devnet
+  // localnet
   pub price_update:  SystemAccount<'info>,
 
   pub token_program: Interface<'info, TokenInterface>,

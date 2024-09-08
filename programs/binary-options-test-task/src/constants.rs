@@ -4,7 +4,6 @@ use anchor_lang::prelude::*;
 pub const ADMIN_WALLET: &str = "FexVSkWTomAziTdHs2E4FyDougLbCEZXjHLn4vaPhmiB";
 pub const HOUSE_SHARE_PERCENTAGE: u64 = 1; 
 
-pub const THREAD_AUTHORITY_SEED: &[u8] = b"authority";
 pub const BINARY_OPTION_SEED: &[u8] = b"binary_options";
 
 pub const MAXIMUM_AGE_MINUTES: u64 = 60; 

@@ -2,7 +2,7 @@
 The following are improvements that can be made in a relatively short period of time to enhance the current program:
 - Integrate another oracle that supports Devnet or at least allows deployment of _price update_ contract on Devnet.
 - Enable _Market Makers_ to create Binary Options for a broader range of assets.
-- Implement an on-chain program on Devnet to mock Pyth Oracle behavior, making devnet testing more accessible.
+- Implement an on-chain program on Localnet to mock Pyth Oracle behavior, making devnet testing more accessible.
 - Add more tests to cover failure scenarios and edge cases.
 - Allow early exits for users, with penalties applied.
 
